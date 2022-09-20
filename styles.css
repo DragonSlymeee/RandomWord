@@ -1,41 +1,73 @@
+/* Pour tous les éléments */
 * {
+    /* Marges */
     padding: 0;
     margin: 0;
 }
 
+/* Body */
 body {
+    /* Fond */
     background-color: rgb(249, 249, 249);
+    /* Taille */
     width: 100%;
     height: 100%;
-    
+    /* Marges */
     margin-top: 30vh;
 }
 
+/* Bloc de texte */
 #bloc_def {
-    background-color: rgba(211, 211, 211, 0.195);;
+    /* Fond */
+    background-color: rgba(211, 211, 211, 0.195);
+    /* Taille */
     width: 60%;
-
+    /* Bordure */
     border-radius: 5px;
-
+    /* Marges */
     padding-right: 10%;
     padding-left: 10%;
-
     padding-top: 5vh;
     padding-bottom: 5vh;
-
     margin-left: 10%;
     margin-right: 10%;
 
 }
 
 
+/* Mot affiché */
 #mot_presente {
+    /* Font */
     font-family: 'Tangerine', serif;
     font-size: 5em;
     text-shadow: 4px 4px 4px #aaa;
 }
 
+/* Définition */
 #definition {
-    font-size: 1em;
+    /* Font */
     font-family: 'Dancing Script';
+    font-size: 1em;
+}
+
+/* Partie lien git */
+#git_hub {
+    /* Positionnement */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 5vh;
+    /* Taille */
+    width: 100vw;
+}
+
+/* Lien git */
+/* Normal */
+#lien_git {
+    color: rgb(132, 132, 132);
+}
+/* Hover */
+#lien_git:hover {
+    color: rgb(136, 136, 136);
 }
