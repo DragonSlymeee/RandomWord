@@ -67,6 +67,7 @@ body {
 #lien_git {
     color: rgb(132, 132, 132);
 }
+
 /* Hover */
 #lien_git:hover {
     color: rgb(136, 136, 136);
@@ -89,7 +90,7 @@ button {
 
     cursor: pointer;
     overflow: hidden;
-    
+
     transition: transform 0.4s ease-in-out;
 }
 
@@ -105,14 +106,27 @@ button {
     height: 20px;
     transition: all 0.4s ease-in-out;
 }
+
 .btn-green:hover .icon {
     transform: rotate(360deg) scale(1.2);
 }
 
+/* Alignement téléphone */
+@media screen and (max-width:415px) {
+    .ligne_1 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+}
 
-
-.ligne_1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* Alignement ordinateur */
+@media screen and (min-width:416px) {
+    .ligne_1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
