@@ -54,6 +54,9 @@ function requete_dictionnaire(mot) {
 
 
 window.addEventListener('load',() => {
+    let div_host = document.getElementsByTagName("div")
+    console.log(div_host)
+
     requete_mot_alea()
   });
 

@@ -12,8 +12,6 @@ body {
     /* Taille */
     width: 100%;
     height: 100%;
-    /* Marges */
-    margin-top: 30vh;
 }
 
 /* Bloc de texte */
@@ -31,7 +29,8 @@ body {
     padding-bottom: 5vh;
     margin-left: 10%;
     margin-right: 10%;
-
+    /* Marges */
+    margin-top: 10vh;
 }
 
 
@@ -120,6 +119,12 @@ button {
         margin-top: 5vh;
         margin-bottom: 5vh;
     }
+
+
+    #bloc_def {
+        /* Marges */
+        margin-top: 10vh;
+    }
 }
 
 /* Alignement ordinateur */
@@ -128,5 +133,10 @@ button {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    #bloc_def {
+        /* Marges */
+        margin-top: 30vh;
     }
 }
