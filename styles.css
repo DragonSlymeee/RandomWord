@@ -79,8 +79,8 @@ body {
 
 button {
     position: relative;
-    width: 15vw;
-    height: 10vh;
+    width: 40px;
+    height: 40px;
 
     text-align: center;
     color: white;
@@ -97,12 +97,12 @@ button {
 
 .btn-green {
     background: rgb(132, 132, 132);
-    border-bottom: 2px solid rgb(132, 132, 132);
-    border-radius: 50px;
+    border-radius: 5px;
 }
+
 .btn-green .icon {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     transition: all 0.4s ease-in-out;
 }
 .btn-green:hover .icon {
