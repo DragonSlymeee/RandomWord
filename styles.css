@@ -34,6 +34,13 @@ body {
 }
 
 
+#type {
+    color: red;
+    width: 50%;
+}
+
+
+
 /* Mot affiché */
 #mot_presente {
     /* Font */
@@ -111,7 +118,7 @@ button {
 }
 
 /* Alignement téléphone */
-@media screen and (max-width:415px) {
+@media screen and (max-width:830px) {
     .ligne_1 {
         display: flex;
         align-items: center;
@@ -128,7 +135,7 @@ button {
 }
 
 /* Alignement ordinateur */
-@media screen and (min-width:416px) {
+@media screen and (min-width:830px) {
     .ligne_1 {
         display: flex;
         align-items: center;
