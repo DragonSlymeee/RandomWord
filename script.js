@@ -31,18 +31,25 @@ function requete_dictionnaire(mot) {
     requete.send();
     // Réception de l'API
     requete.onload = function () {
-        const trad = requete.response;
         // Récupération dans le DOM
         let p_mot_presente = document.getElementById('mot_presente');
         let p_definition = document.getElementById('definition');
+        let p_type = document.getElementById('type');
         // Try
         try {
+            const trad = requete.response[0]['meanings'];
             // Récupération de la définition
-            let def = trad[0]['meanings'][0]['definitions'][0]['definition'];
+            let def = trad[0]['definitions'][0]['definition'];
+
+            console.log( trad[0]['definitions'])
+
+            let type = strUcFirst(trad[0]['partOfSpeech'])
+
             // Majuscule à la première lettre
             mot = strUcFirst(mot[0]);
             // == Affichage du mot et de la définition
             p_mot_presente.innerHTML = mot;
+            p_type.innerHTML = type;
             p_definition.innerHTML = def
         // Erreur
         } catch (error) {
