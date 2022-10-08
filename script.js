@@ -1,3 +1,5 @@
+let mot_global;
+
 // Mise en majuscule
 function strUcFirst(a) {
     return (a + '').charAt(0).toUpperCase() + a.substr(1);
@@ -15,6 +17,7 @@ function requete_mot_alea() {
     // Réception de l'API
     requete.onload = function () {
         const mot = requete.response;
+        mot_global = mot;
         // Recherche dans le dictionnaire
         requete_dictionnaire(mot)
     }
@@ -60,20 +63,20 @@ function requete_dictionnaire(mot) {
 }
 
 function prononciation_mot() {
-    if ("speechSynthesis" in window) {
-        let message = new SpeechSynthesisUtterance();
-        let text = "Test";
-        message.text = text;
+    if ('speechSynthesis' in window) {
+        let mot = new SpeechSynthesisUtterance();
+        mot.text = mot_global;
+        mot.lang = "en";
 
-        message.onend = function (event) {
-            alert("C'est finit.");
-        };
 
-        speechSynthesis.speak(message);
+        // Prononce le mot
+        window.speechSynthesis.speak(mot);
 
-    } else {
-        alert("Votre navigateur ne supporte pas les fonctionnalités synthétiseur vocal. Vous ne pourrez donc pas avoir la prononciation des mots.")
-    }
+       } else {
+        // Le navigateur ne supporte pas le text-to-speech
+        alert("Votre navigateur ne supporte pas la fonction text-to-speech.");
+
+       }
 }
 
 
