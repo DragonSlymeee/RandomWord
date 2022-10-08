@@ -59,6 +59,23 @@ function requete_dictionnaire(mot) {
     }
 }
 
+function prononciation_mot() {
+    if ("speechSynthesis" in window) {
+        let message = new SpeechSynthesisUtterance();
+        let text = "Test";
+        message.text = text;
+
+        message.onend = function (event) {
+            alert("C'est finit.");
+        };
+
+        speechSynthesis.speak(message);
+
+    } else {
+        alert("Votre navigateur ne supporte pas les fonctionnalités synthétiseur vocal. Vous ne pourrez donc pas avoir la prononciation des mots.")
+    }
+}
+
 
 window.addEventListener('load',() => {
     let div_host = document.getElementsByTagName("div")
